@@ -19,9 +19,10 @@
 .form-cadastro_submit {
   align-self: flex-end;
   width: 30%;
-  background-color: var(--secundaria);
-  color: white;
+  background-color: #ff8c00;
+  color: var(--secundaria);
   font-weight: 400;
+  border-radius: 4px;
 }
 
 .form-cadastro_submit:active {
