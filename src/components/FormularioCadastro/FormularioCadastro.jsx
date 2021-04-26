@@ -7,12 +7,13 @@ class FormularioCadastro extends Component {
     this.texto = "";
   }
   _handleMudancaTitulo(evento) {
+    evento.stopPropagation();
     this.titulo = evento.target.value;
   }
 
   _handleMudancaTexto(evento) {
-    this.texto = evento.target.value;
     evento.stopPropagation();
+    this.texto = evento.target.value;
   }
 
   _criarNota(evento) {
@@ -23,7 +24,9 @@ class FormularioCadastro extends Component {
 
   render() {
     return (
-      <form className="form-cadastro " onSubmit={this._criarNota.bind(this)}>
+      <form className="form-cadastro " 
+      onSubmit={this._criarNota.bind(this)}
+      >
         <input
           type="text"
           placeholder="Título"
